@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Thisal Vidana - Student Number: 7430292</title>
+    
+    <meta charset="utf-8" />
+    <script>
+
+  /* TASK 4 - Cat, Dog and Frog Images */
+      
+      var imageSourceUrl = "";
+
+      function showButtonAndImage(animal, buttonElement) {
+        var textField = document.getElementById("text-field");
+        textField.value = "User clicks " + animal;
+
+        var imageContainer = document.getElementById("image-container");
+
+        if (animal === 'Cat') {
+          imageSourceUrl = "https://unsplash.com/images/animals/cat";
+          imageContainer.innerHTML = '<img src="CAT IMAGE.jpeg" alt="Cat Image" class="animal-image">' +
+                               '<br>Source: <a href="' + imageSourceUrl + '" target="_blank">' + imageSourceUrl + '</a>';
+      } else if (animal === 'Dog') {
+           imageSourceUrl = "https://dogtime.com/dog-breeds/rottweiler";
+           imageContainer.innerHTML = '<img src="DOG IMAGE.webp" alt="Dog Image" class="animal-image">' +
+                               '<br>Source: <a href="' + imageSourceUrl + '" target="_blank">' + imageSourceUrl + '</a>';
+      } else if (animal === 'Frog') {
+           imageSourceUrl = "https://www.discovermagazine.com/planet-earth/meet-10-of-the-worlds-most-adorable-frogs";
+           imageContainer.innerHTML = '<img src="FROG IMAGE.jpg" alt="Frog Image" class="animal-image">' +
+                               '<br>Source: <a href="' + imageSourceUrl + '" target="_blank">' + imageSourceUrl + '</a>';
+      }
+      // Remove the highlight class from all buttons
+        var buttons = document.querySelectorAll("button");
+        buttons.forEach(button => button.classList.remove("highlighted-button"));
+
+      // Add the highlight class to the clicked button
+        buttonElement.classList.add("highlighted-button");
+      
+      displayText(animal + " ");
+      }
+        
+        var imageSourceContainer = document.getElementById("image-source-container");
+        imageSourceContainer.innerHTML = 'Source: <a href="' + imageSourceUrl + '" target="_blank">' + imageSourceUrl + '</a>';
+  
+                /* TASK 4 - Sources:
+        Cat Image -  https://unsplash.com/images/animals/cat
+        Dog Image - https://dogtime.com/dog-breeds/rottweiler
+        Frog Image - https://www.discovermagazine.com/planet-earth/meet-10-of-the-worlds-most-adorable-frogs */
+      function displaySound(soundText, fontSize, color) {
+        	var soundTextElement = document.getElementById("sound-text");
+        	soundTextElement.textContent = soundText;
+        	soundTextElement.style.fontSize = fontSize;
+        	soundTextElement.style.color = color;
+    	}
+
+      function displayText(animal) {
+            var textElement = document.getElementById("display-text");
+            textElement.textContent = animal + "is clicked";
+      }
+
+    </script>
+
+
+    <style> 
+        h4 {
+			    color: black;
+			    margin-top: 3%;
+          font-size: 25px;
+		    }
+
+    /* TASK 1 - Style Attributes for font colour, size, background, border and spacing */
+        h1 {
+          color: blue;
+          font-size: 28px;      
+          background-color: pink; 
+          border: 5px solid black; 
+          padding: 10px;         
+        }
+        
+        h2 {
+          color: navy;
+          font-size: 24px;
+          background-color: lightblue;
+          border: 5px dashed blue;
+          padding: 10px;
+        }
+        
+        h3 {
+          color: navy;
+          font-size: 24px;
+          background-color: lightseagreen;
+          border: 5px dashed blue;
+          padding: 10px;
+        }
+    /* TASK 2 - Key Dates table: Style Attributes for table with columns, font style, font colour, border style and background colour, */
+        #teamTable1 td {
+         padding: 20px;
+         border-style: solid;
+         border-color: gray;
+         border-width: 3px;
+         font-size: 15px
+        }    
+        
+        #headerRow1 {
+         font-weight: bold;
+         font-size: 30px;
+         color: darkblue;
+         padding: 20px;
+         background-color: darkgray;
+        }   
+
+        #activityColumn {
+         text-align: left;
+         vertical-align: top; 
+        }
+
+        #dateColumn {
+         text-align: left;
+         vertical-align: top;
+        }
+
+        #teamTable1 tr:nth-child(even) {
+         background-color: lightblue;
+         color: navy
+        }
+
+        #teamTable1 tr:nth-child(odd) {
+         background-color: lightgray;
+         color: darkgreen
+        }
+
+    /* TASK 3 - Web Attacks Table: Style Attributes for table with columns, font style, font colour, border style and background colour, */
+        #teamTable2 td {
+         padding: 20px;
+         border-style: solid;
+         border-color: gray;
+         border-width: 3px;
+         font-size: 15px;
+         text-align: left;
+         font-family: Arial, Helvetica, sans-serif;
+        }    
+        
+        #headerRow2 {
+        font-weight: bold;
+        font-size: 30px;
+        color: darkblue;
+        padding: 20px;
+        background-color: darkgray;
+        }   
+
+        #nameColumn {
+          width: 20%;
+          text-align: left;
+          vertical-align: top;
+          color: blue;
+          font-weight: bold; 
+        }
+
+        #webattacksColumn {
+          width: 60%;
+          text-align: left;
+          vertical-align: top;
+        }
+
+
+    /* TASK 4 - CSS attributes */
+        .animal-image {
+          width: 400px;
+          height: 350px;
+        }
+
+        .highlighted-button {
+          background-color: aquamarine; 
+        }
+    </style>      
+
+                                                                                                                  
+
+                  
+
+
+
+
+
+  </head>
+
+  <h4> Task 1 </h4>
+<!--TASK 1-->
+  <body>
+	<h1>Thisal Vidana, Student Number: 7430292</h1>
+	<h2>COMP804: Web Security</h2>
+    <h3>Assessment Task 3 - Programming Assignment, due 21st August 2023 by 11:00pm</h3>
+	<br>
+
+  <h4> Task 2 </h4>
+<!--TASK 2-->
+    <table id="teamTable1">
+        <!-- Set header row with column headings -->
+
+        <tr id="headerRow1">
+          <th class="activityColumn">
+            Activity
+          </th>
+
+          <th class="dateColumn">
+            Date
+          </th>
+        </tr>
+    
+        <!-- Start adding all row information from table in assignment instructions -->
+        <!-- First Row -->
+
+        <tr>
+          <td class="activityColumn">
+            First day to enrol for re-enrolling (continuing students)
+          </td>
+          <td class="dateColumn">
+            21 Nov 2022
+            <br>
+        </tr>
+        <!-- Second Row -->  
+        <tr>
+            <td class="activityColumn">
+              Orientation
+            </td>
+            <td class="dateColumn">
+              18 Jul 2023
+              <br>
+          </tr>
+        <!-- Third Row -->
+          <tr>
+            <td class="activityColumn">
+              Lectures Commence (weeks 1-9)
+            </td>
+            <td class="dateColumn">
+              24 Jul - 22 Sep 2023
+              <br>
+          </tr>
+        <!-- Fourth Row -->
+          <tr>
+            <td class="activityColumn">
+              Last day to enrol / add subjects yourself
+            </td>
+            <td class="dateColumn">
+              04 Aug 2023
+              <br>
+          </tr>
+        <!-- Fifth Row -->
+          <tr>
+            <td class="activityColumn">
+              Last day to enrol / add subjects with Head of Students approval
+            </td>
+            <td class="dateColumn">
+              11 Aug 2023
+              <br>
+          </tr>
+        <!-- Sixth Row -->
+        <tr>
+            <td class="activityColumn">
+              CENSUS DATE
+              <ul>
+                <li>Fees date</li>
+                <li>Last day to withdraw from subject/s without paying for them</li>
+                <li>HECS / FEE HELP debt reporting date</li>
+                <li>Last day to change HECS / FEE HELP billing option</li>
+                <li><a href="https://www.uow.edu.au/student/dates/#d.en.186577" target="_blank">Learn more about Census date></a></li>
+              </ul>
+            </td>
+            <td class="dateColumn">
+              31 Aug 2023
+              <br>
+        <!-- Seventh Row -->
+        <tr>
+            <td class="activityColumn">
+                Student Services and Amenties Fees Due
+            </td>
+            <td class="dateColumn">
+                01 Sep 2023
+            <br>
+        </tr>
+    </table>
+    <br>
+
+    <h4> Task 3 </h4>
+  <!--TASK 3-->
+  <table id="teamTable2">
+    <!-- Set header row with column headings -->
+
+    <tr id="headerRow2">
+      <th class="nameColumn">
+        Name
+      </th>
+
+      <th class="webattacksColumn">
+        Web Attacks
+      </th>
+    </tr>
+
+    <!-- Start adding all row information from web attacks sources. Sources within code below -->
+    <!-- First Row -->
+
+    <tr>
+      <td class="nameColumn">
+        DoS Attacks
+        <br>
+        <br>
+        <img src="DoS Attacks Image.jpg" width="250px" height= "150px" alt="DoS Attacks">
+        <br>
+        <br>
+        Source: www.123rf.com/photo_65452190_victim-computer-laptop-with-target-lock-has-distributed-denial-of-service-ddos-attack-concept-design.html" />
+
+      </td>
+      <td class="webattacksColumn">
+        A denial-of service (DoS) attack acts to prevent a system in responding to legitimate serivices requests. The victim network becomes flooded by illegitimate requests and it becomes 
+        impossible for the network to operate as it normally does and will result in a complete shutdown. Often, the network will have to come offline which leaves it vulnerable for other types of attacks as well
+        <br>
+        <br>
+        <a href="https://www.fortinet.com/resources/cyberglossary/types-of-cyber-attacks" target="_blank">Learn more about DoS Attacks</a>
+    </tr>
+
+    <!-- Second Row -->  
+    <tr>
+        <td class="nameColumn">
+          Phishing Attacks
+          <br>
+          <br>
+          <img src="Phishing Attacks Image.jpg" width="250px" alt="Phishing Attacks">
+          <br>
+          <br>
+          Source:https://acuityrm.com/blog/phishing-cyber-risk-a-practical-quantitative-approach/
+        </td>
+    
+        <td class="webattacksColumn">
+          A phishing attack occurs when a threat actor sends emails that seem legitimate, in the hope of retrieving sensitive information from victims. These emails will often have a fradulent link, 
+          which will ask the victim to enter their login credentials or other personal information, or even begin downloading malware, when the link is clicked. The threat actor is able to sit within
+          the network undetected and go after other users in the same network
+          <br>
+          <br>
+          <a href="https://www.fortinet.com/resources/cyberglossary/types-of-cyber-attacks" target="_blank">Learn more about Phishing Attacks</a>
+      </tr>
+
+    <!-- Third Row -->
+      <tr>
+        <td class="nameColumn">
+          Ransomware
+          <br>
+          <br>
+          <img src="Ransomware Image.webp" width="250px" alt="Ransomware Attacks">
+          <br>
+          <br>
+          Source: https://www.reversinglabs.com/blog/the-week-in-security-ransomware-pytorch-supply-chain-attack
+        </td>
+
+        <td class="webattacksColumn">
+          Ransomware is  when a victim network is held hostage until they agree to pay a ransom payment to the attacker. Once provided, the attacker promises to give the instructions on how to bring the 
+          fallen network back into operation. A network can become victim to ransomware via a fraud website or a malicious email attachment
+          <br>
+          <br>
+          <a href="https://www.fortinet.com/resources/cyberglossary/types-of-cyber-attacks" target="_blank">Learn more about Ransomware Attacks</a>
+      </tr>
+
+      <!-- Fourth Row -->
+      <tr>
+        <td class="nameColumn">
+          SQL Injection Attacks
+          <br>
+          <br>
+          <img src="SQL Injection Image.webp" width="250px" alt="SQL Injection Attacks">
+          <br>
+          <br>
+          Source: https://medium.com/@mycountryakash/sqli-injection-attack-fe34a64d1144
+        </td>
+
+        <td class="webattacksColumn">
+          Sructured Query Language (SQL) Injection acts to take advantage of networks that deend on databses to conduct daily business functions. This attack uses an SQL query sent from the client to 
+          a database on the server. Once the command is received, it is injected into a data plane in place of what is normally used, such as a password/login. The network can be penetrated once the 
+          server runs the command.If successful, an attacker is able to access sensitive data and modify/delete it, as well as gain adminstrator access and enforce a shutdown of the entire network.
+          <br>
+          <br>
+          <a href="https://www.fortinet.com/resources/cyberglossary/types-of-cyber-attacks" target="_blank">Learn more about SQL Injection Attacks</a>
+      </tr>
+    
+     <!-- Fifth Row -->
+      <tr>
+        <td class="nameColumn">
+          Man-In-The-Middle Attacks
+          <br>
+          <br>
+          <img src="man-in-the-middle Image.jpg" width="250px" alt="Man-In-The-Middle Attacks">
+          <br>
+          <br>
+          Source: https://www.malwarebytes.com/blog/news/2018/07/when-three-isnt-a-crowd-man-in-the-middle-mitm-attacks-explained
+        </td>
+
+        <td class="webattacksColumn">
+          Man-in-the-middle (MITM) attacks describe those attacks which make it possible for an attacker to access the data being sent back and forth between two computers or networks. While the 
+          attacker is spying on the data being exchanged between two parties, they are unaware that the attacker may be modifying or manipulating data before it reaches its destination. Without the 
+          use of encryption protocols or a VPN, networks can be victim to this.
+          <br>
+          <br>
+          <a href="https://www.fortinet.com/resources/cyberglossary/types-of-cyber-attacks" target="_blank">Learn more about Man-In-The-Middle Attacks</a>
+      </tr>
+
+    <!-- Sixth Row -->
+      <tr>
+          <td class="nameColumn">
+            Cryptojacking
+            <br>
+            <br>
+            <img src="Cryptojacking Image.webp" width="250px" alt="Cryptojacking Attacks">
+            <br>
+            <br>
+            Source: https://blog.knowbe4.com/cryptojacking-101-a-first-look-at-cryptomining-attacks
+          </td>
+
+          <td class="webattacksColumn">
+            Cryptojacking refers to when threat actors mine of crptocurrency using another network through unauthorised access. Attackers can gain access by encouraging a victim to access to fradulent
+            link and residing in the network. Victims are often unaware of that crpto mining codes are working in the background. 
+            <br>
+            <br>
+            <a href="https://www.simplilearn.com/tutorials/cyber-security-tutorial/types-of-cyber-attacks" target="_blank">Learn more about Crptojacking Attacks</a>
+          </tr>        
+      <!-- Seventh Row -->
+      <tr>
+          <td class="nameColumn">
+            Trojan Horses
+            <br>
+            <br>
+            <img src="Trojan Horse Image.avif" width="250px" alt="Trojan Horse Attacks">
+            <br>
+            <br>
+            Source: https://www.freepik.com/premium-vector/computer-virus-trojan-horse_5742915.htm
+          </td>
+          <td class="webattacksColumn">
+            Trojan Horse Attacks utilise a malicious code that is masked behind a program that looks legitimate from the outside. When a network prompts the program to run, the malware within is used 
+            to open a backdoor into the network through which attackers can gain access. Often these attacks can be prevented by users not downloading or installing programs unless the source is 
+            verified and trusted.
+          <br>
+          <br>
+          <a href="https://www.fortinet.com/resources/cyberglossary/types-of-cyber-attacks" target="_blank"> Learn more about Trojan Horse Attacks</a>
+      </tr>
+
+      <!-- Eight Row -->
+      <tr>
+        <td class="nameColumn">
+          Supply Chain Attacks
+          <br>
+          <br>
+          <img src="Supply Chain Image.jpg" width="250px" alt="Supply Chain Attacks">
+          <br>
+          <br>
+          Source: https://cyberriskleaders.com/supply-chain-cyber-attacks-expected-to-quadruple-by-end-2021/
+        </td>
+
+        <td class="webattacksColumn">
+          Supply Chain Attacks target third party vendors who work with the victim and offer vital services to them. Attackers use malicious codes within prgrams which result in users becoming infiltrated. 
+          These attacks can have a domino effect and result in large amounts of unauthorised access to data and severe business interruption.  
+          <br>
+          <br>
+          <a href="https://www.crowdstrike.com/cybersecurity-101/cyberattacks/most-common-types-of-cyberattacks/#4.%20Spoofing" target="_blank">Learn more about Supply Chain Attacks</a>
+      </tr>
+
+      <!-- Ninth Row -->
+      <tr>
+        <td class="nameColumn">
+          Internet-of-Things Attacks
+          <br>
+          <br>
+          <img src="Internet-of-Things.jpeg" width="250px" alt="Internet-of-Things Attack">
+          <br>
+          <br>
+          Source: https://www.wallarm.com/what/iot-attack
+        </td>
+
+        <td class="webattacksColumn">
+          Another type of attack is one that targets an Internet of Things (IoT) network, as they generally lack strict security protocols. Attackers are able to exploit this weakness and gain 
+          unauthorised access into a system to steal, manipulate and delete sensitive data as they wish. They can also install malware within the network, which can allow attackers to gain 
+          access to further personal data of the company 
+          <br>
+          <br>
+          <a href="https://www.educative.io/answers/what-are-iot-attacks" target="_blank">Learn more about Internet-of-Things Attacks</a>
+      </tr>      
+
+      <!-- Tenth Row -->
+      <tr>
+        <td class="nameColumn">
+          Cross-Site Scripting Attacks
+          <br>
+          <br>
+          <img src="Cross-Site Scripting.png" width="250px" alt="Cross-Site Scripting Attacks">
+          <br>
+          <br>
+          Source: https://www.securecoding.com/blog/xss-attacks/
+        </td>
+
+        <td class="webattacksColumn">
+          Cross-Site Scripting is when an attacker sends malicious scripting using clickable content, which is sent to the victim's search browser. Once clicked, the script begins to run. As the 
+          victim is logged in as a legitimate user, it does not seem unordinary. For example, the altered script can result in attackers being able to manipulate online banking transactions.
+          <br>
+          <br>
+          <a href="https://www.fortinet.com/resources/cyberglossary/types-of-cyber-attacks" target="_blank">Learn more about Cross-Site Scripting Attacks</a>
+      </tr>      
+    </table>
+
+    <h4> Task 4 </h4>    
+     <!--TASK 4-->
+     
+     <button id="catButton" onclick="showButtonAndImage('Cat', this)">Cat</button>
+     <button id="dogButton" onclick="showButtonAndImage('Dog', this)">Dog</button>
+     <button id="frogButton" onclick="showButtonAndImage('Frog', this)">Frog</button>
+     <br>
+     <br>
+
+     <div>
+      <input type="text" id="text-field" readonly>
+    </div>
+    <p id="display-text"></p>
+    <br>
+    <br>
+     <div id="image-container"></div>
+     <div id="image-source-container"></div>
+
+
+
+  </body>
+
+</html>
